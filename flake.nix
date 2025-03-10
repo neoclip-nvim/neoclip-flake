@@ -1,13 +1,15 @@
 {
-  # TODO ? flake examples : overlay and package ?
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
   inputs.utils.url = "github:numtide/flake-utils";
+  inputs.neoclip.url = "github:neoclip-nvim/neoclip";
+  inputs.neoclip.flake = false;
 
   outputs = {
     self,
     nixpkgs,
     utils,
-  }:
+    ...
+  } @ inputs:
     utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {inherit system;};
@@ -28,7 +30,7 @@
           pname = "neoclip-lib";
           inherit version;
 
-          src = ./src;
+          src = "${inputs.neoclip}/src";
 
           inherit nativeBuildInputs;
           inherit buildInputs;
@@ -56,7 +58,7 @@
           pname = "neoclip";
           inherit version;
 
-          src = ./.;
+          src = inputs.neoclip;
 
           unpackPhase = ''
             cp -r $src/{lua,doc} .

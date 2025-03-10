@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "neoclip": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724414907,
+        "narHash": "sha256-fe5VR5EVsGbLpa4Cda07bP599tZy2Tu+lIAxpx+61UU=",
+        "owner": "neoclip-nvim",
+        "repo": "neoclip",
+        "rev": "adfb1430c7308f0b3036f89b037509b3d0b4610a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neoclip-nvim",
+        "repo": "neoclip",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1740463929,
@@ -18,6 +34,7 @@
     },
     "root": {
       "inputs": {
+        "neoclip": "neoclip",
         "nixpkgs": "nixpkgs",
         "utils": "utils"
       }
