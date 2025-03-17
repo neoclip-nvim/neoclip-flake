@@ -6,7 +6,7 @@
 }:
 lib.makeScope pkgs.newScope (self: {
   neoclip-lib = stdenv.mkDerivation {
-    version = "0.0.0"; # TODO
+    inherit version;
 
     pname = "neoclip-lib";
 
