@@ -22,7 +22,7 @@
     utils.lib.eachDefaultSystem out
     // {
       overlays.default = final: prev:
-        let scope = final.callPackage ./package.nix {
+        let scope = final.callPackage ./scope.nix {
           src = inputs.neoclip;
           version = "0.0.0";
         };
