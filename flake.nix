@@ -31,8 +31,3 @@
         };
     };
 }
-
-        # shell = pkgs.mkShell {
-        #   buildInputs = nativeBuildInputs ++ buildInputs;
-        #   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
-        # };
