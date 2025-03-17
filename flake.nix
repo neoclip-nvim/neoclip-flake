@@ -13,10 +13,11 @@
     let
       out = system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
-          appliedOverlay = self.overlays.default pkgs pkgs;
+          pkgs' = nixpkgs.legacyPackages.${system};
+          pkgs = pkgs'.extend self.overlays.default;
         in {
-          packages.default = appliedOverlay.vimPlugins.neoclip;
+          packages.default = pkgs.vimPlugins.neoclip;
+          checks.default = pkgs.callPackage ./test.nix {};
         };
     in
     utils.lib.eachDefaultSystem out
