@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+cd $(git rev-parse --show-toplevel)
+
+cd examples/with-overlay/
+nix run .
+
+cd examples/with-package/
+nix run .
