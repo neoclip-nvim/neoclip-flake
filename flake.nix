@@ -1,7 +1,7 @@
 {
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
   inputs.utils.url = "github:numtide/flake-utils";
-  inputs.neoclip.url = "github:neoclip-nvim/neoclip";
+  inputs.neoclip.url = "github:matveyt/neoclip";
   inputs.neoclip.flake = false;
 
   outputs = {
@@ -24,7 +24,7 @@
       overlays.default = final: prev:
         let scope = final.callPackage ./scope.nix {
           src = inputs.neoclip;
-          version = "0.0.0";
+          version = "2025.03.17";
         };
         in {
           vimPlugins.neoclip = scope.neoclip;

@@ -3,15 +3,15 @@
     "neoclip": {
       "flake": false,
       "locked": {
-        "lastModified": 1724414907,
-        "narHash": "sha256-fe5VR5EVsGbLpa4Cda07bP599tZy2Tu+lIAxpx+61UU=",
-        "owner": "neoclip-nvim",
+        "lastModified": 1742217964,
+        "narHash": "sha256-NEIoNYnlXUTYPA7F8xr7aKZjJ2hPhT96gQ7PmPdSovA=",
+        "owner": "matveyt",
         "repo": "neoclip",
-        "rev": "adfb1430c7308f0b3036f89b037509b3d0b4610a",
+        "rev": "dcff26d98fde73664b7dffb916834b544ed50c11",
         "type": "github"
       },
       "original": {
-        "owner": "neoclip-nvim",
+        "owner": "matveyt",
         "repo": "neoclip",
         "type": "github"
       }
